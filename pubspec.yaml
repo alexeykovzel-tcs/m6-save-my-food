@@ -1,0 +1,74 @@
+name: save_my_food
+description: Food inventory application for reducing spendings on food
+
+# Prevent accidental publishing to pub.dev
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_native_splash: ^2.2.13
+  cached_network_image: ^3.2.3
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^1.1.6
+  provider: ^6.0.1
+  camera: ^0.10.1
+  intl: ^0.18.0
+  http: ^0.13.5
+  flutter_local_notifications: ^13.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.11.0
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/corners/
+    - assets/images/logo/
+    - assets/font/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/font/Inter-Light.otf
+          weight: 300
+        - asset: assets/font/Inter-Regular.otf
+          weight: 400
+        - asset: assets/font/Inter-Medium.otf
+          weight: 500
+        - asset: assets/font/Inter-SemiBold.otf
+          weight: 600
+        - asset: assets/font/Inter-Bold.otf
+          weight: 700
+
+flutter_native_splash:
+  color: '#FF6C6C'
+  image: assets/images/logo/logo_1152x1152.png
+  android: true
+  web: false
+  ios: true
+
+  # Configure native splash for android
+  android_gravity: center
+  android_12:
+    icon_background_color: '#FF6C6C'
+    image: assets/images/logo/logo_1152x1152.png
+
+# Configure launcher icon
+flutter_icons:
+  android: launcher_icon
+  image_path: assets/images/logo/logo_843x827.jpg
+  min_sdk_android: 21
+  ios: true
